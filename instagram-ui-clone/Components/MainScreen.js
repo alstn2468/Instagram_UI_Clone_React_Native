@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Platform} from 'react-native';
 import {Icon} from 'native-base';
 import {createTabNavigator} from 'react-navigation';
 
@@ -33,11 +33,31 @@ const AppTabNavigator = createTabNavigator({
     Search: {
         screen: SearchTab
     },
+    AddMedia: {
+        screen: AddMediaTab
+    },
     Likes: {
         screen: LikesTab
     },
     Profile: {
         screen: ProfileTab
+    }
+},{
+    animationEnabled: true,
+    swipeEnabled: true,
+    tabBarPosition: 'bottom',
+    tabBarOptions: {
+        style: {
+            ...Platform.select({
+                android:{
+                    backgroundColor: 'white'
+                }
+            })
+        },
+        activeTintColor: '#000',
+        inactiveTintColor: '#d1cece',
+        showLabel: false,
+        showIncoe: true,
     }
 })
 
