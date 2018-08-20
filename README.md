@@ -1,4 +1,4 @@
-인스타그램 UI 클론 코딩
+Instagram UI Clone Coding
 ======================
 [김민수](https://github.com/alstn2468)
 -------------------------------
