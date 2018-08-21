@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Platform} from 'react-native';
 import {Icon} from 'native-base';
-import {createTabNavigator} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation';
 
 import HomeTab from './AppTabNavigator/HomeTab';
 import SearchTab from './AppTabNavigator/SearchTab';
@@ -26,7 +26,7 @@ class MainScreen extends Component {
 
 export default MainScreen;
 
-const AppTabNavigator = createTabNavigator({
+const AppTabNavigator = createBottomTabNavigator({
     HomeTab: {
         screen: HomeTab
     },
@@ -42,7 +42,8 @@ const AppTabNavigator = createTabNavigator({
     Profile: {
         screen: ProfileTab
     }
-},{
+},
+{
     animationEnabled: true,
     swipeEnabled: true,
     tabBarPosition: 'bottom',
