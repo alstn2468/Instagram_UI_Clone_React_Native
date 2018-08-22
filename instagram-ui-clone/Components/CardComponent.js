@@ -6,9 +6,9 @@ import {Card, CardItem, Thumbnail, Body,
 class CardComponent extends Component {
     render() {
         const images = {
-            '1' : require('../assets/cardimg1.png'),
-            '2' : require('../assets/cardimg2.png'),
-            '3' : require('../assets/cardimg3.png')
+            '1' : require('../assets/card_img_1.png'),
+            '2' : require('../assets/card_img_2.png'),
+            '3' : require('../assets/card_img_3.png')
         }
 
         return (
@@ -26,7 +26,7 @@ class CardComponent extends Component {
                 <CardItem>
                     <Image source={images[this.props.imageSource]} style={style.cardimg}/>
                 </CardItem>
-                
+
                 <CardItem style={{height:45}}>
                     <Left>
                         <Button transparent>
