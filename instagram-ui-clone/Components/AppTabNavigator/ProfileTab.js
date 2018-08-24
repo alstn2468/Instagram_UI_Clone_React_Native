@@ -52,6 +52,11 @@ class ProfileTab extends Component {
                                 </View>
                             </View>
                         </View>
+                        <View style={style.profileThumbnailView}>
+                            <Text style={style.profileThumbnailTextName}>김민수</Text>
+                            <Text style={style.profileThumbnailTextSub}>React-Native</Text>
+                            <Text style={style.profileThumbnailTextSub}>Instagram Clone Coding</Text>
+                        </View>
                     </View>
                 </Content>
             </Container>
@@ -92,7 +97,8 @@ const style = StyleSheet.create({
     profileTextView: {
         flexDirection:'row',
         justifyContent:'space-around',
-        paddingTop: 5
+        paddingTop: 5,
+        paddingRight: 10
     },
     profileTextNum: {
         fontSize: 17,
@@ -108,5 +114,16 @@ const style = StyleSheet.create({
         height: 30,
         marginHorizontal: 10,
         marginTop: 10
+    },
+    profileThumbnailView: {
+        paddingHorizontal: 15,
+        paddingVertical: 10
+    },
+    profileThumbnailTextName: {
+        fontWeight:'bold',
+        fontSize: 12
+    },
+    profileThumbnailTextSub: {
+        fontSize: 10
     }
 })
