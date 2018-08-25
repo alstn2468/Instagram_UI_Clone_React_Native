@@ -58,6 +58,16 @@ class ProfileTab extends Component {
                             <Text style={style.profileThumbnailTextSub}>Instagram Clone Coding</Text>
                         </View>
                     </View>
+                    <View>
+                        <View style={style.profileTabBottomIcon}>
+                            <Button transparent><Icon name='ios-apps-outline'/></Button>
+                            <Button transparent><Icon name='ios-list-outline'/></Button>
+                            <Button transparent><Icon name='ios-people-outline'/></Button>
+                            <Button transparent><Icon name='ios-bookmark-outline'/></Button>
+                        </View>
+                        <View>
+                        </View>
+                    </View>
                 </Content>
             </Container>
         );
@@ -125,5 +135,11 @@ const style = StyleSheet.create({
     },
     profileThumbnailTextSub: {
         fontSize: 10
+    },
+    profileTabBottomIcon: {
+        flexDirection:'row',
+        justifyContent:'space-around',
+        borderTopWidth:1,
+        borderTopColor:'#eae5e5'
     }
 })
