@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
 import {Icon, Container, Content, Header, Left, Body, Right, Button} from 'native-base';
+
+import CardCompnent from '../CardComponent';
+
+var images = [
+    require('../../assets/card_img_1.png'),
+    require('../../assets/card_img_2.png'),
+    require('../../assets/card_img_3.png')
+]
+
+var {width, height} = Dimensions.get('window')
 
 class ProfileTab extends Component {
     static navigationOptions = {
@@ -23,11 +33,34 @@ class ProfileTab extends Component {
         })
     }
 
+    renderSectionOne = () => {
+        return images.map((image, index) => {
+            return (
+                <View key={index} style={[{width:(width) / 3}, {height:(width) / 3},
+                    index % 3 !== 0 ? {paddingLeft: 2}:{paddingLeft: 0},{marginBottom: 2}]
+                }>
+                    <Image style={{flex: 1, width: undefined, height: undefined}}
+                    source = {image}/>
+                </View>
+            )
+        })
+    }
+
     renderSection = () => {
         if (this.state.activeIndex == 0) {
             return(
+                <View style={{flexDirection:'row', flexWrap:'wrap'}}>
+                    {this.renderSectionOne()}
+                </View>
+            )
+        }
+
+        else if(this.state.activeIndex == 1) {
+            return(
                 <View>
-                    <Text>this is first section</Text>
+                <CardCompnent imageSource='1' likes='100'/>
+                <CardCompnent imageSource='2' likes='36'/>
+                <CardCompnent imageSource='3' likes='240'/>
                 </View>
             )
         }
@@ -57,7 +90,7 @@ class ProfileTab extends Component {
                             <View style={{flex:3}}>
                                 <View style={style.profileTextView}>
                                     <View style={{alignItems:'center'}}>
-                                        <Text style={style.profileTextNum}>1</Text>
+                                        <Text style={style.profileTextNum}>3</Text>
                                         <Text style={style.profileTextStr}>게시물</Text>
                                     </View>
                                     <View style={{alignItems:'center'}}>
