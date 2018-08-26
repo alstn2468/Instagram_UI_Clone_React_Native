@@ -14,4 +14,10 @@ Instagram UI Clone Coding
 - react-navigation (2.11.2)
 
 ## Result
-In progress
+- HomeTab.js
+<img src="../images/1.png" width="500" height="auto">
+<img src="../images/2.png" width="500" height="auto">
+
+- ProfileTab.js
+<img src="../images/3.png" width="500" height="auto">
+<img src="../images/4.png" width="500" height="auto">
