@@ -15,9 +15,9 @@ Instagram UI Clone Coding
 
 ## Result
 - HomeTab.js
-<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/1.png" width="500" height="auto">
-<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/2.png" width="500" height="auto">
+<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/1.png" width="300" height="auto">
+<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/2.png" width="300" height="auto">
 
 - ProfileTab.js
-<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/3.png" width="500" height="auto">
-<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/4.png" width="500" height="auto">
+<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/3.png" width="300" height="auto">
+<img src="https://github.com/alstn2468/Instagram_UI_Clone_React_Native/blob/master/images/4.png" width="300" height="auto">
