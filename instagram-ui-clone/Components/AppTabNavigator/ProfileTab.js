@@ -9,6 +9,30 @@ class ProfileTab extends Component {
         )
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            activeIndex: 0
+        };
+    }
+
+    segmentClicked=(index)=> {
+        this.setState({
+            activeIndex: index
+        })
+    }
+
+    renderSection = () => {
+        if (this.state.activeIndex == 0) {
+            return(
+                <View>
+                    <Text>this is first section</Text>
+                </View>
+            )
+        }
+    }
+
     render() {
         return (
             <Container>
@@ -60,12 +84,21 @@ class ProfileTab extends Component {
                     </View>
                     <View>
                         <View style={style.profileTabBottomIcon}>
-                            <Button transparent><Icon name='ios-apps-outline'/></Button>
-                            <Button transparent><Icon name='ios-list-outline'/></Button>
-                            <Button transparent><Icon name='ios-people-outline'/></Button>
-                            <Button transparent><Icon name='ios-bookmark-outline'/></Button>
+                            <Button transparent onPress={()=>this.segmentClicked(0)} active={this.state.activeIndex == 0}>
+                                <Icon name='ios-apps-outline' style={[this.state.activeIndex == 0 ? {} : {color:'grey'}]}/>
+                            </Button>
+                            <Button transparent onPress={()=>this.segmentClicked(1)} active={this.state.activeIndex == 1}>
+                                <Icon name='ios-list-outline' style={[this.state.activeIndex == 1 ? {} : {color:'grey'}]}/>
+                            </Button>
+                            <Button transparent onPress={()=>this.segmentClicked(2)} active={this.state.activeIndex == 2}>
+                                <Icon name='ios-people-outline' style={[this.state.activeIndex == 2 ? {} : {color:'grey'}]}/>
+                            </Button>
+                            <Button transparent onPress={()=>this.segmentClicked(3)} active={this.state.activeIndex == 3}>
+                                <Icon name='ios-bookmark-outline' style={[this.state.activeIndex == 3 ? {} : {color:'grey'}]}/>
+                            </Button>
                         </View>
                         <View>
+                            {this.renderSection()}
                         </View>
                     </View>
                 </Content>
